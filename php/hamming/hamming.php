@@ -7,7 +7,16 @@
 
 function distance($a, $b)
 {
-    //
-    // YOUR CODE GOES HERE
-    //
+    $arrayA = str_split($a);
+    $arrayB = str_split($b);
+
+
+    var_dump($arrayA);
+
+    $result = array_reduce($arrayA, function($acc, $item) {
+        if ($arrayA[$item] !== $arrayB[$item]) {
+          return $acc + $item;
+        }
+    }, 0);
+    return $result;
 }
