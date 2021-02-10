@@ -6,8 +6,7 @@ class Transcriptor {
       T: 'A',
       A: 'U',
     };
-    const dnaArr = dna.split('');
-    const rnaArr = dnaArr.map((elem) => {
+    const rnaArr = [...dna].map((elem) => {
       const dnaToRna = dnaDict[elem];
       if (!dnaToRna) {
         throw 'Invalid input DNA.';
