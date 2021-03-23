@@ -3,3 +3,6 @@ _build/
 *.swp
 node_modules
 .idea
+.dart_tool/
+.packages
+build/
