@@ -1,8 +1,13 @@
 # Hello World
 
+Welcome to Hello World on Exercism's Dart Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 The classical introductory exercise. Just say "Hello, World!".
 
-["Hello, World!"](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
+["Hello, World!"](https://en.wikipedia.org/wiki/%22Hello,_world!%22_program) is
 the traditional first program for beginning programming in a new language
 or environment.
 
@@ -14,18 +19,17 @@ The objectives are simple:
 
 If everything goes well, you will be ready to fetch your first real exercise.
 
-
-To run the tests:
-
-```sh
-$ pub run test
-```
-
-For more detailed info about the Dart track see the [installation](http://exercism.io/languages/dart/installation) and [testing](http://exercism.io/languages/dart/tests) pages.
-
 ## Source
 
-This is an exercise to introduce users to using Exercism [http://en.wikipedia.org/wiki/%22Hello,_world!%22_program](http://en.wikipedia.org/wiki/%22Hello,_world!%22_program)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @SuperPaintman
+
+### Contributed to by
+
+- @rafaelalvessa
+- @Stargator
+
+### Based on
+
+This is an exercise to introduce users to using Exercism - https://en.wikipedia.org/wiki/%22Hello,_world!%22_program
