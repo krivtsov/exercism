@@ -11,11 +11,16 @@ defmodule FreelancerRates do
 
   @spec monthly_rate(number, number) :: integer
   def monthly_rate(hourly_rate, discount) do
-    trunc(Float.ceil(apply_discount(daily_rate(hourly_rate) * 22, discount)))
+    hourly_rate * 22
+    |> daily_rate
+    |> apply_discount(discount)
+    |> Float.ceil()
+    |> trunc
   end
 
   @spec days_in_budget(number, number, number) :: float
   def days_in_budget(budget, hourly_rate, discount) do
-    Float.floor(budget / apply_discount(daily_rate(hourly_rate), discount), 1)
+    (budget / (hourly_rate |> daily_rate |> apply_discount(discount)))
+    |> Float.floor(1)
   end
 end
