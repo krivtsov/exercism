@@ -1,6 +1,6 @@
 -module(leap).
 
--export([leap_year/1, test_version/0]).
+-export([leap_year/1]).
 
 leap_year(Year) ->
   if
@@ -9,5 +9,3 @@ leap_year(Year) ->
     true ->
       false
   end.
-
-test_version() -> 1.
