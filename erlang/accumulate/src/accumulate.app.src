@@ -1,6 +1,6 @@
 {application, accumulate,
-  [{description, "exercism.io - accumulate"},
-    {vsn, "0.0.1"},
+  [{description, "exercism.org - accumulate"},
+    {vsn, "0.0.0"},
     {modules, []},
     {registered, []},
     {applications, [kernel,
