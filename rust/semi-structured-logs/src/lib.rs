@@ -8,17 +8,24 @@ pub enum LogLevel {
     Info,
     Warning,
     Error,
+    Debug,
 }
 /// primary function for emitting logs
 pub fn log(level: LogLevel, message: &str) -> String {
-    unimplemented!("return a message for the given log level")
+    let result = match level {
+        LogLevel::Info => info(message),
+        LogLevel::Warning => warn(message),
+        LogLevel::Error => error(message),
+        LogLevel::Debug => "[DEBUG]: ".to_owned() + message,
+    };
+    result
 }
 pub fn info(message: &str) -> String {
-    unimplemented!("return a message for info log level")
+    "[INFO]: ".to_owned() + message
 }
 pub fn warn(message: &str) -> String {
-    unimplemented!("return a message for warn log level")
+    "[WARNING]: ".to_owned() + message
 }
 pub fn error(message: &str) -> String {
-    unimplemented!("return a message for error log level")
+    "[ERROR]: ".to_owned() + message
 }
