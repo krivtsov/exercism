@@ -1,23 +1,16 @@
 defmodule GuessingGame do
-  @spec compare(Number, Number) :: <<_::56, _::_*8>>
-  def compare(secret_number, guess) do
-    case {secret_number, guess} do
-      {secret_number, guess} when is_number(guess) ->
-        cond do
-          secret_number == guess -> "Correct"
-          secret_number + 1 == guess -> "So close"
-          secret_number - 1 == guess -> "So close"
-          secret_number < guess -> "Too high"
-          secret_number > guess -> "Too low"
-          true -> "Make a guess"
-        end
+  @spec compare(Number, any) :: <<_::56, _::_*8>>
 
-      {_, _} ->
-        "Make a guess"
-    end
-  end
+  def compare(_, guess \\ :guess)
+  def compare(_, guess) when not is_integer(guess), do: "Make a guess"
+  def compare(secret_number, secret_number), do: "Correct"
 
-  def compare(_) do
-    "Make a guess"
-  end
+  def compare(secret_number, guess)
+      when is_number(guess) and abs(secret_number - guess) == 1,
+      do: "So close"
+
+  def compare(secret_number, guess) when is_number(guess) and secret_number < guess,
+    do: "Too high"
+
+  def compare(secret_number, guess) when is_number(guess) and secret_number > guess, do: "Too low"
 end
