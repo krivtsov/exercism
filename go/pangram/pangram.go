@@ -1,5 +1,15 @@
 package pangram
 
+import (
+	"strings"
+)
+
 func IsPangram(input string) bool {
-	panic("Please implement the IsPangram function")
+	alphabet := "abcdefghijklmnopqrstuvwxyz"
+	for _, letter := range alphabet {
+		if !strings.ContainsRune(strings.ToLower(input), letter) {
+			return false
+		}
+	}
+	return true
 }
