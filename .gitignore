@@ -3,6 +3,7 @@ _build/
 *.swp
 node_modules
 .idea
+.vscode
 
 # Files and directories created by pub
 .dart_tool/
